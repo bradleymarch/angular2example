@@ -1,0 +1,10 @@
+<h1><strong>My name: </strong>{{name}}</h1>
+<p><strong>Address:</strong> {{address.street}} <br /> {{address.city}}, {{address.state}}</p>
+<h2>Here's some random API data:</h2>
+<button type="button" name="button" (click)="toggleData()">{{show ? "Hide Dummy API Data" : "Show Dummy API Data"}}</button>
+<div *ngIf="show">
+  <div *ngFor="let post of posts">
+    <h3>{{post.title}}</h3>
+      <li>{{post.body}}</li>
+  </div>
+</div>
